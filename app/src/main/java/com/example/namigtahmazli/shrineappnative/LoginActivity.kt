@@ -16,7 +16,7 @@ class LoginActivity : AppCompatActivity() {
             background = dropShadow(mShape = CutCornersShape(8 * density),
                     backgroundColor = color(R.color.colorPrimaryDark),
                     ripple = true,
-                    rippleColor = R.color.half_white,
+                    rippleColor = color(android.R.color.white),
                     elevationGravity = Gravity.BOTTOM)
             setOnClickListener {
                 startActivity(Intent(this@LoginActivity, HomeActivity::class.java))
