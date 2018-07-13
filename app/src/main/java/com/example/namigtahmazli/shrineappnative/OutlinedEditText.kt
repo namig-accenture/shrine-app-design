@@ -1,6 +1,9 @@
 package com.example.namigtahmazli.shrineappnative
 
-import android.animation.*
+import android.animation.AnimatorSet
+import android.animation.ArgbEvaluator
+import android.animation.ObjectAnimator
+import android.animation.ValueAnimator
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Paint
@@ -15,6 +18,7 @@ import android.view.Gravity
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.LinearLayout
 import kotlin.math.sqrt
@@ -223,9 +227,7 @@ class OutlinedEditText : LinearLayout, View.OnTouchListener, View.OnFocusChangeL
 
     override fun onTouch(v: View?, event: MotionEvent?): Boolean {
         return if (event?.action == MotionEvent.ACTION_DOWN) {
-            if (editText?.hasFocus() != true) {
-                editText?.requestFocus()
-            }
+            editText?.requestFocus()
             true
         } else {
             super.onTouchEvent(event)
@@ -234,6 +236,11 @@ class OutlinedEditText : LinearLayout, View.OnTouchListener, View.OnFocusChangeL
 
     override fun onFocusChange(v: View?, hasFocus: Boolean) {
         onHasFocus(hasFocus)
+        if (hasFocus) {
+            (context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager).apply {
+                toggleSoftInput(0, InputMethodManager.SHOW_IMPLICIT)
+            }
+        }
     }
 
     private fun onHasFocus(hasFocus: Boolean) {
