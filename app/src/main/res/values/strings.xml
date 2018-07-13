@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">ShrineAppNative</string>
+
+    <string name="login_activity_username">Username</string>
+    <string name="login_activity_password">Username</string>
+    <string name="login_activity_btn_next">Next</string>
+    <string name="login_activity_btn_cancel">Cancel</string>
+
+    <string name="home_activity_title">SHRINE</string>
+    <string name="menu_search">Search</string>
+
+    <string name="menu_featured">Featured</string>
+    <string name="menu_apartment">Apartment</string>
+    <string name="menu_accessories">Accessories</string>
+    <string name="menu_shoes">Shoes</string>
+    <string name="menu_tops">Tops</string>
+    <string name="menu_bottoms">Bottoms</string>
+    <string name="menu_dresses">Dresses</string>
+    <string name="menu_my_account">My Account</string>
+    <string name="menu_tune">Tune</string>
+</resources>

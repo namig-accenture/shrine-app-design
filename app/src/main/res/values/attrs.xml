@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CutCornerView">
+        <attr name="topLeft" format="boolean" />
+        <attr name="topRight" format="boolean" />
+        <attr name="bottomLeft" format="boolean" />
+        <attr name="bottomRight" format="boolean" />
+        <attr name="cut" format="dimension" />
+        <attr name="elevationGravity" format="integer" />
+        <attr name="backgroundColor" format="color" />
+        <attr name="topShadow" format="boolean" />
+        <attr name="leftShadow" format="boolean" />
+        <attr name="rightShadow" format="boolean" />
+        <attr name="bottomShadow" format="boolean" />
+    </declare-styleable>
+</resources>
